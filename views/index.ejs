@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title%></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+</head>
+<body>
+<div id="header">Searchify</div>
+<div id="speech">
+    <input type="image" alt="submit" src="/images/mic.png" id="recBtn" onclick="startButton(event)"></input>
+    <form id="resultSpeech" action="submitSpeech">
+        <input type="text" id="result_span" class="final" name="result_span" value="<%= output%>"></input>
+        <button id="searchBtn" class="btn btn-success">Search</button>
+    </form>
+</div>
+<script type="text/javascript" src="/javascripts/speech.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</body>
+</html>

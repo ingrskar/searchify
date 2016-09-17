@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title%></title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
+</head>
+<body>
+<div id="header">Searchify</div>
+<div id="speech">
+    <input type="image" alt="submit" src="/images/mic.png" id="recBtn" onclick="startButton(event)"></input>
+    <form id="resultSpeech" action="submitSpeech">
+        <input type="text" id="result_span" class="final" name="result_span" value="<%= track%>"></input>
+        <button id="searchBtn" class="btn btn-success">Search</button>
+    </form>
+</div>
+<div id="output" class='container'>
+    <div class="row">
+        <div class="col-xs-6" name='player' id="player">
+            <p><br></p>
+            <iframe src="https://embed.spotify.com/?uri=<%= trackPlay %>&output=embed" frameborder="0"
+                    allowtransparency="true"></iframe>
+            <p>Artists related to <%= trackArtist %>:</p>
+            <% for(var i = 0; i <= 2; i++) { %>
+            <p id="relatedText"><a href="<%= relatedArtist[i].url %>"><%= relatedArtist[i].artist %></a></p>
+            <% } %>
+            <a class="twitter-hashtag-button"
+               href="https://twitter.com/intent/tweet?text=<%= trackArtist %>"
+               data-size="large">
+                Tweet</a>
+        </div>
+        <div class='col-xs-6' id="tweetsTable">
+            <h3>Most recent <span id=twitterText>tweets</span> mentioning <%= trackArtist %></h3>
+            <table class="table .table-striped">
+                <thead>
+                <tr>
+                    <th>User</th>
+                    <th>Tweet</th>
+                </tr>
+
+                <% for(var i = 0; i < tweets.length; i++) { %>
+                <tr>
+                    <td id="textTweet"><a href="https://twitter.com/<%= tweets[i].user_id %>"><%= tweets[i].user %></a>
+                    </td>
+                    <td id="textTweet"><a
+                                href="https://twitter.com/intent/tweet?in_reply_to=<%= tweets[i].tweet_id %>"><%= tweets[i].tweet %></a>
+                    </td>
+                </tr>
+                <% } %>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/javascripts/speech.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+</body>
+</html>

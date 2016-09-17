@@ -1,0 +1,87 @@
+* {
+    font-family: Verdana, Arial, sans-serif;
+    background-color: #EEE;
+    color: dimgrey;
+}
+
+html, body {
+    max-width: 100%;
+}
+
+
+#header {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #EEE;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 300;
+}
+
+#speech {
+    text-align: center;
+}
+
+#result_span {
+    border: none;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 15px;
+}
+
+#output {
+    padding-top: 2%;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+
+}
+
+#player {
+    padding-right: 2%;
+    max-width: 38%;
+    margin: auto;
+    display: block;
+    text-align: right;
+
+}
+
+#tweetsTable {
+    padding-right: 5%;
+    overflow-wrap: break-word;
+    max-width: 62%;
+    margin: auto;
+    display: block;
+    text-align: left;
+}
+
+.table {
+    max-width: 1000px;
+}
+
+#twitterText {
+    color: #1da1f2;
+    font-size: 24px;
+    font-style: inherit;
+}
+
+#textTweet a:link {
+    color: dimgray;
+    text-decoration: none;
+}
+
+#textTweet a:hover{
+    color:#1da1f2;
+}
+
+#relatedText a:link{
+    text-decoration: none;
+    color: #1DB954;
+}
+
+#relatedText a:hover {
+    color: dimgray;
+}
+
+#relatedText a:visited {
+    color: #1DB954;
+}
