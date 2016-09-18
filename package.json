@@ -12,7 +12,9 @@
     "ejs": "~2.4.1",
     "express": "~4.13.4",
     "morgan": "~1.7.0",
+    "node-twitter": "^0.5.3",
     "pm2": "^2.0.12",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "spotify-web-api-node": "^2.3.5"
   }
 }
