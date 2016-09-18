@@ -10,8 +10,8 @@ var SpotifyWebApi = require('spotify-web-api-node');
 
 // credentials for Spotify Web API
 var spotifyApi = new SpotifyWebApi({
-    clientId: 'c07ef8ba3cee4340987342b66bd4ef3a',
-    clientSecret: '3252c1d3d7c2452f9b93c24f7f0e4a26',
+    clientId: '',
+    clientSecret: '',
     redri: '/'
 });
 
@@ -20,10 +20,10 @@ var TwitterAPI = require('node-twitter');
 
 /// credentials for Twitter API
 var twitter = new TwitterAPI.SearchClient(
-    '24MuESZ6OILlpeXhOpXfrIgGP',
-    'QsUkTBCTHIpFNUoHVGXTLfgrXrFvyFPeHoHC8Btq14V1ScArp4',
-    '772612067484282880-p8ej2I2XoRuUtBnYO4mE1xJAHMI6goH',
-    'G6pqyluZgPVoMH5Ybdcg041p0XDtQgl88TOs1xh9HRg8n'
+    '',
+    '',
+    '',
+    ''
 );
 
 
